@@ -2,7 +2,7 @@
 ## 1.环境配置-安装Git ##
 在电脑上安装Git
 ## 2.上传GitHub项目 ##
-###1. 配置公钥###
+### 1. 配置公钥 ###
 
 首先，需要创建我们自己的电脑和github上远程仓库的一个连接，本地Git仓库和Github仓库之间的传输是通过SSH加密的，所以连接时需要配置一下加密的公钥和密钥。先看一下你C盘用户目录下有没有.ssh目录，有的话看下里面有没有id_rsa和id_rsa.pub这两个文件，没有就通过下面命令创建：
 
@@ -11,7 +11,7 @@
 
 然后在C:\Users\student（你的用户名）下会找到一个.ssh文件夹，点击进入，会有id_rsa和id_rsa.pub这两个文件，右击记事本打开id_rsa.pub，复制里面的全部内容，登录Github，找到右上角的图标，打开点进里面的Settings，再选中里面的SSH and GPG KEYS，点击右上角的New SSH key，然后Title里面随便填，再把刚才id_rsa.pub里面的内容复制到Title下面的Key内容框里面，最后点击Add SSH key。至此，你的计算机和github账户就建立了一个连接，换电脑需要重新添加公钥。
 
-###2.git上传项目到github账户###
+### 2.git上传项目到github账户 ###
 进入你需要上传的项目的根目录（必须是要上传的项目的根目录下），右击-git bash，以下是一系列的命令行语句：
 
 > git config --global user.name "你的github用户名"  
@@ -35,13 +35,13 @@
 > git push origin master
 
 **先PULL再PUSH**
-###3.Github删除文件###
+### 3.Github删除文件 ###
 如果直接在项目里删除不需要的或者误上传的文件，然后执行git add， git commit，git push一系列的操作，但是结果会是上传失败，为什么呢？原因和之前我们需要进行pull操作是一个，因为github仓库上的文件你本地没有，他就会让你进行pull操作，但是删掉的文件就又会被pull下来，白删了，删文件也是需要用命令行语句删的：
 
 > git rm "需要删除的文件名"  
 > git push origin master
 
-###4.Github更新文件###
+### 4.Github更新文件 ###
 比如你修改了一些文件，  
 > git status （查看文件状态，这时下面会出现红色的提示  modified 你修改了的文件）  
 
