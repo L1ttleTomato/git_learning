@@ -10,3 +10,4 @@ git的特点：最优的存储能力，非凡的性能，开源，很容易做�
     git config --global user.name 'your_name'  
 	git config --global user.email 'your_email@domain.com'
 ### config的三个作用域 ###
+1
